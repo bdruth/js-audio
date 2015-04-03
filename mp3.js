@@ -193,8 +193,8 @@ function Mp3Reader (blob, offset) {
 
     function fill(buffer, offset, callback) {
         var written = 0;
-        if (currentBuffer.length > 0) {
-            if (buffer.length < currentBuffer.length) {
+        if (currentBuffer && currentBuffer.length > 0) {
+            if (buffer && buffer.length < currentBuffer.length) {
                 buffer.set(currentBuffer.subarray(0, buffer.length));
                 currentBuffer = currentBuffer.subarray(buffer.length);
                 callback(buffer);
