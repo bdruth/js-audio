@@ -210,5 +210,5 @@ function Mp3Reader (blob, offset) {
 }
 
 function showFrameInfo(frame) {
-    console.log('at ' + frame.offset, 'audioVersion', frame.version, 'layer', frame.layer, 'protection?', frame.protection, 'mainDataBegin', frame.mainDataBegin, 'bytes', frame.size, 'next', frame.offset + frame.size);
+    return 'at ' + frame.offset, 'audioVersion', frame.version, 'layer', frame.layer, 'protection?', frame.protection, 'mainDataBegin', frame.mainDataBegin, 'bytes', frame.size, 'next', frame.offset + frame.size;
 }
